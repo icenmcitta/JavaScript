@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 280px;
+            background-color: #eee;
+            padding: 20px;
+            margin: 0 auto;
+        }
+        button{
+            margin: 30px 25px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>商品：Web前端课程</p>
+        <p>原价：1999元</p>
+        <p>现价：199元</p>
+        <p>内容：HTML、CSS、JS</p>
+        <p>地址：上海市</p>
+        <p>
+            <button>支付</button>
+            <button>取消</button>
+        </p>
+    </div>
+    <script>
+        // 点击“支付”按钮，出现确认框
+        document.getElementsByTagName('button')[0].onclick = function() {
+            let res = window.confirm('您确定要支付吗？');
+            if(res){
+                location.href = './success.html'
+            }
+        }
+        // 点击“取消”按钮，跳转到课程页面
+        document.getElementsByTagName('button')[1].onclick = function() {
+            location.href = 'https://www.w3school.com.cn/';
+        }
+    </script>
+</body>
+</html>
